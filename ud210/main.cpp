@@ -29,6 +29,7 @@
 #include "L8/m3WhyClasses.hpp"
 #include "L8/Dog.hpp"
 #include "L8/Cat.hpp"
+#include "L8/HelperFunctions.hpp"
 
 int main()
 {
@@ -80,7 +81,7 @@ int main()
     
     runFH();
     std::cout<<"\n---------------------------\n\n\n";
-    */
+    
     
     runFR();
     std::cout<<"\n---------------------------\n\n\n";
@@ -96,6 +97,7 @@ int main()
     
     runWClass();
     std::cout<<"\n---------------------------\n\n\n";
+    */
     
     /*
      * Goal: practice creating and using a class
@@ -126,5 +128,28 @@ int main()
     
     std::cout<<"\n---------------------------\n\n\n";
     
-    return 0;
+    Gameboard game1;
+    
+    game1.setGameSpace(0,0,'x');
+    game1.setGameSpace(0,1,'x');
+    game1.setGameSpace(0,2,'x');
+    game1.setGameSpace(0,3,'y');
+    game1.setGameSpace(1,0,'x');
+    game1.setGameSpace(2,0,'x');
+    game1.setGameSpace(3,0,'x');
+    game1.setGameSpace(3,1,'x');
+    game1.setGameSpace(3,2,'x');
+    game1.setGameSpace(3,3,'x');
+    
+    if(game1.fourInRow() == 1)
+    {
+        cout<<"X got four in a row! \n\n";
+    }
+    else
+    {
+        cout<<"X did not get four in a row :(\n\n";
+    }
+    game1.printInfo();
+    
+    std::cout<<"\n---------------------------\n\n\n";
 }
